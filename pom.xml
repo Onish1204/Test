@@ -51,14 +51,6 @@
             <version>3.8.1</version>
         </dependency>
 
-        <!-- Dependency to use softAssertion as it is not available in Junit like TestNG -->
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>3.16.1</version>
-            <scope>test</scope>
-        </dependency>
-
     </dependencies>
 
 </project>
