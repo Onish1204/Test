@@ -17,7 +17,7 @@ public class WalletHubLoginPage extends Common {
     @FindBy(xpath = "//span[text()='Remember']")
     private WebElement rememberLoginBtn;
 
-    @FindBy(xpath = "//span[text()='Login']")
+    @FindBy(xpath = "//span[text()='Login']/..")
     private WebElement loginBtn;
 
     public WalletHubLoginPage() {
@@ -29,8 +29,9 @@ public class WalletHubLoginPage extends Common {
         emailField.sendKeys(username);
         passwordField.sendKeys(password);
         js.executeScript("arguments[0].click();", rememberLoginBtn);
-        js.executeScript("arguments[0].click();", loginBtn);
+        loginBtn.click();
         checkLoadingOfPage();
+        Assert.assertEquals("[wallethub.com/profile/test-insurance-company-13732055i]", getHtmlPageName());
     }
 
 }

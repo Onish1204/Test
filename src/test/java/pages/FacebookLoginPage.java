@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class FacebookLoginPage extends Common {
     FacebookHomePage fbHomePage = null;
 
-    @FindBy(xpath = "//input[@placeholder='Email address or phone number']")
+    @FindBy(xpath = "//input[@id='email']")
     private WebElement username;
 
     @FindBy(xpath = "//input[@placeholder='Password']")
